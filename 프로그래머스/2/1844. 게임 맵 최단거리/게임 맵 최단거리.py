@@ -22,7 +22,7 @@ def solution(maps):
             if nx >= 0 and ny >= 0 and nx < M and ny < N:
                 if maps[ny][nx] > 0: # 2차원 배열 범위를 벗어나지 않고, 벽이 아닌 경우 큐에 추가
                     queue.append([nx, ny, move+1])
-                    maps[ny][nx] = VISITED
+                    maps[ny][nx] = VISITED    # 큐에 중복 추가를 막기 위해 큐에 추가할 때 VISITED 처리
     
     # 결승점에 도달하지 못한 경우
     return -1

@@ -26,7 +26,7 @@ def solution(jobs):
         now += running
         result += now-start
     
-    # 평균 소요시간 리턴
+    # 평균 소요시간을 리턴
     return result//len(jobs)
             
     

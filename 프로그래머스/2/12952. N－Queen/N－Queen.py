@@ -20,7 +20,7 @@ def nQueen(row, position, n):
 # position의 row, col 자리에 퀸을 놓을 수 있는지 검사하는 함수
 def isPossible(row, col, position):
     for r, c in position:   # 이미 퀸이 놓인 자리 [r, c]
-        if col == c or abs(row-r) == abs(col-c):    # 위 혹은 대각선에 퀸이 있는 경우
+        if col == c or abs(row-r) == abs(col-c):    # 위나 대각선에 퀸이 있는 경우
             return False                            # 퀸을 놓을 수 없다.
     
     return True # 모든 자리를 무사히 통과하면 퀸을 놓을 수 있다.

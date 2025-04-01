@@ -4,7 +4,6 @@
 #define R 0
 #define G 1
 #define B 2
-#define MAX 1000000
 
 using namespace std;
 
@@ -32,14 +31,14 @@ int main()
     result[B] = houses[0][B];
 
     for(int i=1; i<houses.size(); i++) {
-        int temp[3] = {0,};
-        temp[R] = houses[i][R] + min(result[G], result[B]);
-        temp[G] = houses[i][G] + min(result[R], result[B]);
-        temp[B] = houses[i][B] + min(result[R], result[G]);
+        int r, g, b;
+        r = houses[i][R] + min(result[G], result[B]);
+        g = houses[i][G] + min(result[R], result[B]);
+        b = houses[i][B] + min(result[R], result[G]);
 
-        result[R] = temp[R];
-        result[G] = temp[G];
-        result[B] = temp[B];
+        result[R] = r;
+        result[G] = g;
+        result[B] = b;
     }
 
     cout << min(min(result[R], result[G]), result[B]);

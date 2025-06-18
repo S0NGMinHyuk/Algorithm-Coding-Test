@@ -1,0 +1,6 @@
+-- 코드를 작성해주세요
+-- ROUNT(N, 2) = 소수 2번째 자리로 반올림
+-- IFNULL(A, 10) = A가 NULL 이면 10 리턴
+SELECT ROUND(AVG(IFNULL(LENGTH, 10)), 2) AS AVERAGE_LENGTH
+FROM FISH_INFO
+

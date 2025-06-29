@@ -1,0 +1,15 @@
+-- 코드를 작성해주세요
+SELECT
+    A.ID,
+    CASE
+        WHEN COUNT(B.ID) > 0 THEN COUNT(*)
+        ELSE 0
+    END CHILD_COUNT
+FROM 
+    ECOLI_DATA AS A
+LEFT JOIN
+    ECOLI_DATA AS B
+ON
+    A.ID = B.PARENT_ID
+GROUP BY
+    A.ID

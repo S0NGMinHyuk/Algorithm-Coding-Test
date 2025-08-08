@@ -29,6 +29,6 @@ def getBinary(num) -> list:
         num = num // 2
         if len(lst) == length:
             length *= 2
-    for _ in range(1, length-len(lst)): # 리스트 길이를 (2**n)-1로 맞추기
+    for _ in range(len(lst), length-1): # 리스트 길이를 (2**n)-1로 맞추기
         lst.append(0)
     return lst[::-1]

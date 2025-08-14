@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(5000000)
+sys.setrecursionlimit(10**6)
 
 def solution(a, edges):
     def createGraph(): # 트리 생성 함수

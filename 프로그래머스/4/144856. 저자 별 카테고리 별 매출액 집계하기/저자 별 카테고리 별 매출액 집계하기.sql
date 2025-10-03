@@ -1,4 +1,6 @@
 -- 코드를 입력하세요
+-- group by 신경쓰기
+
 select a.author_id, a.author_name, category, sum(price*amount) as total_sales
 from book
 left join (

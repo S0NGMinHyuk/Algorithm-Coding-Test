@@ -11,7 +11,7 @@ class Solution {
         });
         
         for (int i=0; i<n; i++) {
-            for (int j=i+1; j<n; j++) {
+            for (int j=i+1; j<n; j++) { // 5000^2회는 아직 안터지나?
                 int[] a = data[i];
                 int[] b = data[j];
                 
